@@ -15,7 +15,7 @@ export class GptService {
         this.openai = new OpenAIApi(this.configuration);
     }
 
-    getMbtiInfo(mbti): string {
+    getMbtiInfo(mbti: string): string {
         const result: any = this.openai.createChatCompletion({
             model: 'gpt-3.5-turbo',
             messages: [{
